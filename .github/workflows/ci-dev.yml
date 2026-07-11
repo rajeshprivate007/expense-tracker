@@ -33,8 +33,8 @@ jobs:
         push: true
         # Replace 'your-dockerhub-username' and 'your-repo-name' with your actual names
         tags: |
-          ${{ secrets.DOCKERHUB_USERNAME }}/your-repo-name:latest
-          ${{ secrets.DOCKERHUB_USERNAME }}/your-repo-name:${{ github.sha }}
+          ${{ secrets.DOCKERHUB_USERNAME }}/expense-tracker:latest
+          ${{ secrets.DOCKERHUB_USERNAME }}/expense-tracker:${{ github.sha }}
         # Speeds up future builds by caching layers on GitHub
         cache-from: type=gha
         cache-to: type=gha,mode=max
