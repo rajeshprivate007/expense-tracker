@@ -1,8 +1,10 @@
 name: Build and Push Docker Image
 
 on:
+  workflow_dispatch:
+
   push:
-    branches: [ "develop" ] # Triggers the workflow every time you push to the main branch
+    branches: [ "" ] # Triggers the workflow every time you push to the main branch
 
 jobs:
   build-and-push:
