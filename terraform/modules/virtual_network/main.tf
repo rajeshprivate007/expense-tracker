@@ -1,11 +1,3 @@
-# Terraform configuration for Azure Resource Group
-module "resource_group" {
-  source   = "./modules/resource_group"
-  name     = var.resource_group_name
-  location = var.location
-  tags     = var.common_tags
-}
-
 # Terraform configuration for Virtual Network
 resource "azurerm_virtual_network" "vnet" {
   name                = var.vnet_name

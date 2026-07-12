@@ -1,17 +1,6 @@
-# Resource group variables
 variable "resource_group_name" {
   description = "Name of the Resource group"
   type = string
-}
-
-# Common Tags and location variable to be applied to all Azure resources
-variable "common_tags" {
-  description = "Common tags applied to all Azure resources"
-  type = map(string)
-  default = {
-    "Owner" = "rajesh.sahu.private@gmail.com"
-    "Environment" = "dev"
-  }
 }
 
 variable "location" {
@@ -20,7 +9,6 @@ variable "location" {
   default = "East US"
 }
 
-# Virtual Network variables
 variable "vnet_name" {
   description = "Virtual Network Name"
   type = string
@@ -41,3 +29,11 @@ variable "subnet_cidr" {
   type = list(string)
 }
 
+variable "common_tags" {
+  description = "Common tags applied to all Azure resources"
+  type = map(string)
+  default = {
+    "Owner" = "rajesh.sahu.private@gmail.com"
+    "Environment" = "dev"
+  }
+}
