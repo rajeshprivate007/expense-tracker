@@ -44,11 +44,26 @@ variable "subnet_cidr" {
   type        = list(string)
 }
 
+variable "aks_subnet_id" {
+  description = "ID of the subnet where AKS nodes will be deployed"
+  type        = string
+}
+
 # =================== AKS cluster variables =====================
+
+variable "aks_cluster_name" {
+  description = "AKS cluster Name"
+  type = string
+}
 
 variable "kubernetes_version" {
   description = "AKS Kubernetes version"
   type        = string
+}
+
+variable "dns_prefix" {
+  description = "AKS DNS Prefix"
+  type = string
 }
 
 variable "aks_sku_tier" {
@@ -234,4 +249,20 @@ variable "namespaces" {
       annotations = {}
     }
   }
+}
+
+# =================== Log Analytics Workspace variables =====================
+variable "workspace_name" {
+  description = "Log Analytics workspace Name"
+  type = string
+}
+
+variable "workspace_sku" {
+  description = "Log Analytics workspace SKU"
+  type = string
+}
+
+variable "workspace_retention_in_days" {
+  description = "Retention in days"
+  type = number
 }

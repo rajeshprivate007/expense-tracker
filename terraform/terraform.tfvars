@@ -12,9 +12,16 @@ vnet_address_space = ["10.0.0.0/16"]
 aks_subnet_name = "subnet_aks_dev"
 subnet_cidr = ["10.0.1.0/24"]
 
+# =========== Values for Log Analytics Workspace ==============
+workspace_name = "log-analytics-dev"
+workspace_sku = "PerGB2018"
+workspace_retention_in_days = 30
+
 
 # =========== Values for AKS Cluster ==============
+aks_cluster_name = "aks-dev"
 kubernetes_version = "1.34.6"
+dns_prefix = "dev-aks-dns"
 aks_sku_tier = "Standard"
 private_cluster_enabled = false
 local_account_disabled = true
@@ -66,13 +73,13 @@ node_pools = {
 
 namespaces = {
   apps = {
-    name        = "apps"
+    name        = "dev-apps"
     labels      = {
       "workload" = "apps"
     }
     annotations = {}
   }
-  
+
   ingress = {
       labels = {
         istio_injection = "disabled"
