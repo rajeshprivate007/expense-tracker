@@ -209,7 +209,31 @@ variable "namespaces" {
   }
 }
 
+variable "aks_subnet_id" {
+  description = "Subnet ID used by the AKS cluster"
+  type        = string
+  default     = null
+}
+
+variable "log_analytics_workspace_id" {
+  description = "ID of the Log Analytics workspace attached to the AKS cluster"
+  type        = string
+  default     = null
+}
+
 variable "common_tags" {
   description = "Common tags applied to all Azure resources"
-  type = map(string)
+  type               = string
+  default     = null
+}
+
+variable "log_analytics_workspace_id" {
+  description = "ID of the Log Analytics workspace attached to the AKS cluster"
+  type        = string
+  default     = null
+}
+
+variable "common_tags" {
+  description = "Common tags applied to all Azure resources"
+  type        = map(string)
 }

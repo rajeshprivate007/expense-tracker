@@ -6,7 +6,7 @@ output "name" {
 
 output "aks_subnet_id" {
   description = "The ID of the AKS subnet"
-  value       = azurerm_subnet.aks.id
+  value       = azurerm_virtual_network.vnet.subnet[0].id
 }
 
 output "location" {

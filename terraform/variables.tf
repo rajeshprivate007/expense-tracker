@@ -53,7 +53,7 @@ variable "aks_subnet_id" {
 
 variable "aks_cluster_name" {
   description = "AKS cluster Name"
-  type = string
+  type        = string
 }
 
 variable "kubernetes_version" {
@@ -63,7 +63,7 @@ variable "kubernetes_version" {
 
 variable "dns_prefix" {
   description = "AKS DNS Prefix"
-  type = string
+  type        = string
 }
 
 variable "aks_sku_tier" {
@@ -209,16 +209,16 @@ variable "node_pools" {
 
   default = {
     apps = {
-      name                 = "apps"
-      vm_size              = "Standard_D4s_v5"
-      mode                 = "User"
-      zones                = ["1", "2", "3"]
-      os_type              = "Linux"
-      os_sku               = "Ubuntu"
-      max_pods             = 30
-      enable_auto_scaling  = true
-      min_count            = 1
-      max_count            = 5
+      name                = "apps"
+      vm_size             = "Standard_D4s_v5"
+      mode                = "User"
+      zones               = ["1", "2", "3"]
+      os_type             = "Linux"
+      os_sku              = "Ubuntu"
+      max_pods            = 30
+      enable_auto_scaling = true
+      min_count           = 1
+      max_count           = 5
       node_labels = {
         workload = "apps"
       }
@@ -254,15 +254,15 @@ variable "namespaces" {
 # =================== Log Analytics Workspace variables =====================
 variable "workspace_name" {
   description = "Log Analytics workspace Name"
-  type = string
+  type        = string
 }
 
 variable "workspace_sku" {
   description = "Log Analytics workspace SKU"
-  type = string
+  type        = string
 }
 
 variable "workspace_retention_in_days" {
   description = "Retention in days"
-  type = number
+  type        = number
 }
